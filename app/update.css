@@ -1,0 +1,28 @@
+.freshness {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: -16px 0 24px;
+  padding: 14px 16px;
+  background: #e8eee8;
+  border-left: 3px solid var(--green);
+  color: #59635d;
+  font-size: 11px;
+}
+.freshness b { color: var(--green); }
+.freshness em { margin-left: auto; color: #818781; font-style: normal; }
+.meta .published { color: #4d6358; font-weight: 700; }
+.fee {
+  display: inline-block;
+  margin: 0 10px 9px 0;
+  padding: 3px 7px;
+  background: #f1dfd5;
+  color: #94431f;
+  font-size: 10px;
+  font-weight: 800;
+}
+.dateInfo small { color: #9b5b3d; font-size: 11px; }
+@media (max-width: 850px) {
+  .freshness { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .freshness em { margin-left: 0; }
+}

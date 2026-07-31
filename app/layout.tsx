@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./update.css";
 
 export const metadata: Metadata = {
   title: "财经培训日报｜免费财税法培训情报",
