@@ -27,6 +27,17 @@ const resources = [
   { kind: "IMA框架", title: "管理会计能力素质框架", desc: "IMA管理会计能力素质框架及技术分析、报告控制、战略绩效等学习资源索引。", source: "IMA官方", updated: "免费PDF", url: "https://prodcm.imanet.org/-/media/IMA/Files/Home/Insights-and-Trends/SMA/IMA-Management-Accounting-Competency-Framework/IMA-Management-Accounting-Competency-Framework.ashx" },
 ];
 
+const bigFourResources = [
+  { firm: "德勤 Deloitte", kind: "会计准则", title: "IAS Plus 国际财务报告资源库", desc: "IFRS、IASB 与可持续披露动态，含准则摘要、项目进展、示例报表、清单及技术刊物。", access: "公开免费", language: "英文 / 多语种", url: "https://www.iasplus.com/" },
+  { firm: "德勤 Deloitte", kind: "准则课程", title: "IFRS 免费电子学习模块", desc: "按IAS及IFRS准则编排的在线学习模块，适合系统复习确认、计量、列报和披露要求。", access: "公开免费", language: "英文", url: "https://www.iasplus.com/en/publications/e-learning" },
+  { firm: "普华永道 PwC", kind: "会计准则", title: "Viewpoint 财务报告知识库", desc: "美国会计、财务报告与可持续披露技术解读，配套播客、网络研讨会及每周更新。", access: "美国内容免费", language: "英文", url: "https://www.pwc.com/us/en/products/viewpoint.html" },
+  { firm: "普华永道 PwC", kind: "税务指南", title: "Worldwide Tax Summaries", desc: "由各地税务专家编写，覆盖全球企业税和个人税，可跨国家、按专题生成定制对比报告。", access: "公开免费", language: "英文", url: "https://taxsummaries.pwc.com/" },
+  { firm: "安永 EY", kind: "会计准则", title: "International GAAP", desc: "国际财务报告准则的解释与实务应用指南，可通过EY Atlas客户端免费阅读数字版本。", access: "免费注册阅读", language: "英文", url: "https://www.ey.com/en_gl/technical/ifrs-technical-resources/international-gaap-2024-global-perspective-on-ifrs" },
+  { firm: "安永 EY", kind: "税务指南", title: "Worldwide Corporate Tax Guide", desc: "约150个司法管辖区的企业所得税、预提税、转让定价和反避税制度年度汇编。", access: "免费PDF", language: "英文", url: "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/tax-guides/documents/ey-worldwide-corporate-tax-guide-10-2025.pdf" },
+  { firm: "毕马威 KPMG", kind: "会计准则", title: "IFRS Institute", desc: "IFRS与可持续披露技术文章、实务手册、工具包、播客及网络研讨会回放。", access: "公开免费", language: "英文", url: "https://kpmg.com/us/en/insights-by-topic/ifrs-institute.html" },
+  { firm: "毕马威 KPMG", kind: "税务工具", title: "Tax Tools & TaxNewsFlash", desc: "全球税率比较工具、国际税务动态、监管政策与重要司法意见的快速摘要。", access: "公开免费", language: "英文", url: "https://kpmg.com/ee/en/services/tax/tax-tools-and-resources.html" },
+];
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState("全部");
@@ -93,6 +104,14 @@ export default function Home() {
             <div className="resourceTop"><span>{resource.kind}</span><b>{String(i + 1).padStart(2, "0")}</b></div>
             <h3>{resource.title}</h3><p>{resource.desc}</p>
             <div className="resourceFoot"><span>{resource.source}</span><em>{resource.updated}</em><b>↗</b></div>
+          </a>)}
+        </div>
+        <div className="bigFourHead"><div><span className="kicker">BIG FOUR TECHNICAL LIBRARY</span><h2>四大税务与会计准则资源</h2></div><p>仅收录事务所官方入口 · 访问条件如实标注</p></div>
+        <div className="bigFourGrid">
+          {bigFourResources.map((resource) => <a className="bigFourCard" href={resource.url} target="_blank" rel="noreferrer" key={resource.title}>
+            <div className="bigFourMeta"><span>{resource.firm}</span><em>{resource.kind}</em></div>
+            <h3>{resource.title}</h3><p>{resource.desc}</p>
+            <div className="bigFourFoot"><b>{resource.access}</b><span>{resource.language}</span><i>访问官网 ↗</i></div>
           </a>)}
         </div>
         <p className="resourceNote">说明：标注“会员课程”的培训资料可能需要协会会员账号登录，但资源入口及通知均可公开访问。</p>
