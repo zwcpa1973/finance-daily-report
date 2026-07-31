@@ -83,6 +83,7 @@ export default function Home() {
 
       <section className="resourceSection" id="resources">
         <div className="sectionTitle"><div><span className="kicker">FREE PROFESSIONAL TOOLKIT</span><h2>免费专业资源</h2></div><p>法规、模板、课件与案例 · 官方入口直达</p></div>
+        <div className="wechatRadar"><span>公众号雷达</span><div><b>新增微信信源</b><p>同步检索各地注协、税协、财政局官方公众号；仅收录账号身份可由官网或政府信息交叉验证的文章。</p></div><em>公众号首发 → 身份核验 → 链接入库</em></div>
         <div className="resourceGrid">
           {resources.map((resource, i) => <a className="resourceCard" href={resource.url} target="_blank" rel="noreferrer" key={resource.title}>
             <div className="resourceTop"><span>{resource.kind}</span><b>{String(i + 1).padStart(2, "0")}</b></div>
@@ -93,7 +94,7 @@ export default function Home() {
         <p className="resourceNote">说明：标注“会员课程”的培训资料可能需要协会会员账号登录，但资源入口及通知均可公开访问。</p>
       </section>
 
-      <section className="sources" id="sources"><div><span className="kicker">SOURCE &amp; FRESHNESS</span><h2>信息收录标准</h2></div><p>优先收录近7天发布的官方信息；近30天信息仅在仍可报名或学习时保留；更早通知必须有明确的年度开放期限才会进入主列表。已结束、已截止项目转入归档，不再占用今日清单。</p><div className="sourceTags"><span>发布日期可核验</span><span>参与期限有效</span><span>费用如实标注</span><span>官方原文直达</span></div></section>
+      <section className="sources" id="sources"><div><span className="kicker">SOURCE &amp; FRESHNESS</span><h2>信息收录标准</h2></div><p>优先收录近7天发布的官方信息；近30天信息仅在仍可报名或学习时保留；更早通知必须有明确的年度开放期限才会进入主列表。微信公众号作为补充发现渠道，须核验官方账号身份；已结束、已截止项目转入归档。</p><div className="sourceTags"><span>官方网站</span><span>官方微信公众号</span><span>发布日期可核验</span><span>参与期限有效</span><span>费用如实标注</span></div></section>
       <footer><div className="brand"><span className="brandMark">财</span><span>财经培训日报</span></div><p>让专业成长信息，每天准时抵达。</p><span>© 2026 · 官方信源智能聚合</span></footer>
     </main>
   );

@@ -24,6 +24,11 @@
 .dateInfo small { color: #9b5b3d; font-size: 11px; }
 .resourceSection { padding: 82px 8vw 100px; background: #ebe9e1; border-top: 1px solid var(--line); }
 .resourceGrid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); border-left: 1px solid var(--line); }
+.wechatRadar { display: grid; grid-template-columns: 120px 1fr auto; gap: 22px; align-items: center; margin: -14px 0 28px; padding: 18px 20px; color: white; background: var(--green); }
+.wechatRadar > span { padding: 7px 10px; color: var(--green); background: #bfe7d5; font-size: 11px; font-weight: 800; text-align: center; }
+.wechatRadar b { font-size: 13px; }
+.wechatRadar p { margin: 5px 0 0; color: #c8dbd3; font-size: 11px; line-height: 1.6; }
+.wechatRadar em { color: #a8c8bb; font-size: 10px; font-style: normal; white-space: nowrap; }
 .resourceCard { min-height: 270px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f5f3ec; transition: .2s; }
 .resourceCard:hover { color: white; background: var(--green); transform: translateY(-3px); }
 .resourceTop,.resourceFoot { display: flex; align-items: center; justify-content: space-between; }
@@ -40,6 +45,8 @@
   .freshness em { margin-left: 0; }
   .resourceSection { padding: 60px 5vw; }
   .resourceGrid { grid-template-columns: 1fr; }
+  .wechatRadar { grid-template-columns: 1fr; gap: 10px; }
+  .wechatRadar > span { width: max-content; }
   .resourceCard { min-height: auto; }
   .resourceCard p { min-height: auto; }
 }
