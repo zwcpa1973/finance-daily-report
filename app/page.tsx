@@ -38,6 +38,13 @@ const bigFourResources = [
   { firm: "毕马威 KPMG", kind: "税务工具", title: "Tax Tools & TaxNewsFlash", desc: "全球税率比较工具、国际税务动态、监管政策与重要司法意见的快速摘要。", access: "公开免费", language: "英文", url: "https://kpmg.com/ee/en/services/tax/tax-tools-and-resources.html" },
 ];
 
+const bilibiliVideos = [
+  { category: "CPA财务管理", title: "2026 CPA《财管》零基础入门课", creator: "斩六将CPA", published: "2026.01.15", lessons: "约15小时 · 系列课", note: "从财务报表分析、货币时间价值到投融资决策，适合零基础搭建财管框架。", risk: "站内免费观看；配套资料需跳转APP", url: "https://www.bilibili.com/video/BV182rfBnEK9/" },
+  { category: "财税实务", title: "2026财税系统课：企业税与个人税", creator: "B站财税创作者", published: "2026.01.20", lessons: "127集 · 系列课", note: "覆盖费用税前扣除、增值税、个人所得税与常见企业财税问题。", risk: "站内免费观看；观点需对照现行法规", url: "https://www.bilibili.com/video/BV1HfkhBaEnp/" },
+  { category: "CPA税法", title: "注册会计师《税法》系统课程", creator: "之了课堂", published: "持续更新", lessons: "96集 · 系列课", note: "从税法总论到增值税、企业所得税及国际税收，适合CPA税法系统学习。", risk: "视频免费；讲义为条件领取", url: "https://www.bilibili.com/video/BV1t84y1p71Y/" },
+  { category: "管理会计", title: "中央财经大学《管理会计》", creator: "金融知识库", published: "2023.04.13", lessons: "44讲 · 完整课程", note: "讲解管理会计框架、职业道德、预算、成本与经营决策等基础内容。", risk: "站内免费观看；非校方账号上传", url: "https://www.bilibili.com/video/BV1za4y1N74x/" },
+];
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState("全部");
@@ -114,10 +121,19 @@ export default function Home() {
             <div className="bigFourFoot"><b>{resource.access}</b><span>{resource.language}</span><i>访问官网 ↗</i></div>
           </a>)}
         </div>
+        <div className="bigFourHead bilibiliHead"><div><span className="kicker">BILIBILI FREE CLASSROOM</span><h2>Bilibili 免费财务课程</h2></div><p>站内可直接观看 · 标注课程完整度与引流风险</p></div>
+        <div className="bilibiliGrid">
+          {bilibiliVideos.map((video) => <a className="bilibiliCard" href={video.url} target="_blank" rel="noreferrer" key={video.title}>
+            <div className="bilibiliMeta"><span>{video.category}</span><em>{video.published}</em></div>
+            <h3>{video.title}</h3><p>{video.note}</p>
+            <div className="videoFacts"><span>{video.creator}</span><b>{video.lessons}</b></div>
+            <div className="videoRisk">核验提示：{video.risk}<i>播放 ↗</i></div>
+          </a>)}
+        </div>
         <p className="resourceNote">说明：标注“会员课程”的培训资料可能需要协会会员账号登录，但资源入口及通知均可公开访问。</p>
       </section>
 
-      <section className="sources" id="sources"><div><span className="kicker">SOURCE &amp; FRESHNESS</span><h2>信息收录标准</h2></div><p>优先收录近7天发布的官方信息；近30天信息仅在仍可报名或学习时保留；更早通知必须有明确的年度开放期限才会进入主列表。微信公众号作为补充发现渠道，须核验官方账号身份；已结束、已截止项目转入归档。</p><div className="sourceTags"><span>官方网站</span><span>官方微信公众号</span><span>发布日期可核验</span><span>参与期限有效</span><span>费用如实标注</span></div></section>
+      <section className="sources" id="sources"><div><span className="kicker">SOURCE &amp; FRESHNESS</span><h2>信息收录标准</h2></div><p>优先收录近7天发布的官方信息；近30天信息仅在仍可报名或学习时保留；更早通知必须有明确的年度开放期限才会进入主列表。微信公众号须核验官方账号身份；Bilibili课程优先机构、高校或实名讲师账号，并标注课程完整度、时效及站外引流风险。</p><div className="sourceTags"><span>官方网站</span><span>官方微信公众号</span><span>Bilibili免费课程</span><span>发布日期可核验</span><span>参与期限有效</span><span>费用如实标注</span></div></section>
       <footer><div className="brand"><span className="brandMark">财</span><span>财经培训日报</span></div><p>让专业成长信息，每天准时抵达。</p><span>© 2026 · 官方信源智能聚合</span></footer>
     </main>
   );
