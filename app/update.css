@@ -29,6 +29,10 @@
 .wechatRadar b { font-size: 13px; }
 .wechatRadar p { margin: 5px 0 0; color: #c8dbd3; font-size: 11px; line-height: 1.6; }
 .wechatRadar em { color: #a8c8bb; font-size: 10px; font-style: normal; white-space: nowrap; }
+.communityRadar { display: grid; grid-template-columns: 140px 1fr auto; gap: 20px; align-items: center; margin: -16px 0 28px; padding: 14px 20px; border: 1px dashed #d7a98e; background: #f4e7df; }
+.communityRadar span { color: #9b4e28; font-size: 11px; font-weight: 800; }
+.communityRadar p { margin: 0; color: #74665e; font-size: 11px; line-height: 1.7; }
+.communityRadar b { padding: 6px 9px; color: #9b4e28; background: #ecd1c1; font-size: 10px; white-space: nowrap; }
 .resourceCard { min-height: 270px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f5f3ec; transition: .2s; }
 .resourceCard:hover { color: white; background: var(--green); transform: translateY(-3px); }
 .resourceTop,.resourceFoot { display: flex; align-items: center; justify-content: space-between; }
@@ -47,6 +51,8 @@
   .resourceGrid { grid-template-columns: 1fr; }
   .wechatRadar { grid-template-columns: 1fr; gap: 10px; }
   .wechatRadar > span { width: max-content; }
+  .communityRadar { grid-template-columns: 1fr; gap: 8px; }
+  .communityRadar b { width: max-content; }
   .resourceCard { min-height: auto; }
   .resourceCard p { min-height: auto; }
 }

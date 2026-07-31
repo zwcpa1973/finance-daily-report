@@ -22,6 +22,9 @@ const resources = [
   { kind: "案例讲解", title: "政府及非营利组织会计应用案例", desc: "包含合并财务报表、成本核算、预算管理一体化及长期股权投资案例。", source: "财政部会计司", updated: "持续更新", url: "https://kjs.mof.gov.cn/zt/zfkjzz/yyal/" },
   { kind: "最新案例", title: "准则解释第20号实施问答与案例", desc: "2026年7月24日发布，跟进最新企业会计准则解释及配套实务口径。", source: "财政部会计司", updated: "07.24", url: "https://kjs.mof.gov.cn/gongzuotongzhi/index.htm" },
   { kind: "培训资料", title: "继续教育课程与直播回放入口", desc: "上海注协公开的年度录播与专题直播回放入口，按会员资格登录学习。", source: "上海市注册会计师协会", updated: "开放至12.31", url: "https://www.shcpa.org.cn/column/?psid=71" },
+  { kind: "IMA免费资源", title: "CMA官方免费备考资源", desc: "包含CMA练习题、考试模拟器、个性化学习计划、考试指南及备考策略网络研讨会。", source: "IMA官方", updated: "持续开放", url: "https://prodcm.imanet.org/ima-certifications/cma-certification/prepare/resources" },
+  { kind: "IMA网络课程", title: "IMA Webinars 专题中心", desc: "覆盖数据分析、财务报告、领导力、职业发展及战略管理；部分资源会员免费。", source: "IMA官方", updated: "持续更新", url: "https://www.imanet.org/continuing-education/webinars" },
+  { kind: "IMA框架", title: "管理会计能力素质框架", desc: "IMA管理会计能力素质框架及技术分析、报告控制、战略绩效等学习资源索引。", source: "IMA官方", updated: "免费PDF", url: "https://prodcm.imanet.org/-/media/IMA/Files/Home/Insights-and-Trends/SMA/IMA-Management-Accounting-Competency-Framework/IMA-Management-Accounting-Competency-Framework.ashx" },
 ];
 
 export default function Home() {
@@ -84,6 +87,7 @@ export default function Home() {
       <section className="resourceSection" id="resources">
         <div className="sectionTitle"><div><span className="kicker">FREE PROFESSIONAL TOOLKIT</span><h2>免费专业资源</h2></div><p>法规、模板、课件与案例 · 官方入口直达</p></div>
         <div className="wechatRadar"><span>公众号雷达</span><div><b>新增微信信源</b><p>同步检索各地注协、税协、财政局官方公众号；仅收录账号身份可由官网或政府信息交叉验证的文章。</p></div><em>公众号首发 → 身份核验 → 链接入库</em></div>
+        <div className="communityRadar"><span>小红书社区资源</span><p>平台要求登录后才返回搜索结果；当前不展示未经核验的帖子。登录检索后将按“直接免费 / 条件领取 / 待核验”分类，并保留原帖链接与作者。</p><b>待登录采集</b></div>
         <div className="resourceGrid">
           {resources.map((resource, i) => <a className="resourceCard" href={resource.url} target="_blank" rel="noreferrer" key={resource.title}>
             <div className="resourceTop"><span>{resource.kind}</span><b>{String(i + 1).padStart(2, "0")}</b></div>
