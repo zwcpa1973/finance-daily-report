@@ -22,7 +22,24 @@
   font-weight: 800;
 }
 .dateInfo small { color: #9b5b3d; font-size: 11px; }
+.resourceSection { padding: 82px 8vw 100px; background: #ebe9e1; border-top: 1px solid var(--line); }
+.resourceGrid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); border-left: 1px solid var(--line); }
+.resourceCard { min-height: 270px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f5f3ec; transition: .2s; }
+.resourceCard:hover { color: white; background: var(--green); transform: translateY(-3px); }
+.resourceTop,.resourceFoot { display: flex; align-items: center; justify-content: space-between; }
+.resourceTop span { padding: 4px 7px; color: var(--green); background: #d8e9df; font-size: 10px; font-weight: 800; }
+.resourceTop b { color: #a3a8a3; font: italic 17px Georgia; }
+.resourceCard h3 { margin: 34px 0 12px; font: 700 19px Georgia,"Songti SC",serif; line-height: 1.45; }
+.resourceCard p { min-height: 66px; margin: 0; color: #707570; font-size: 12px; line-height: 1.8; }
+.resourceFoot { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 10px; }
+.resourceFoot em { margin-left: auto; margin-right: 12px; color: #8a8f8a; font-style: normal; }
+.resourceCard:hover p,.resourceCard:hover .resourceFoot em,.resourceCard:hover .resourceTop b { color: #cbdcd4; }
+.resourceNote { margin: 18px 0 0; color: #7a807b; font-size: 11px; }
 @media (max-width: 850px) {
   .freshness { align-items: flex-start; flex-direction: column; gap: 7px; }
   .freshness em { margin-left: 0; }
+  .resourceSection { padding: 60px 5vw; }
+  .resourceGrid { grid-template-columns: 1fr; }
+  .resourceCard { min-height: auto; }
+  .resourceCard p { min-height: auto; }
 }

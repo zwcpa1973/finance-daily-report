@@ -13,6 +13,17 @@ const items = [
 
 const filters = ["全部", "注册会计师", "税务师", "财政局", "法律合规"];
 
+const resources = [
+  { kind: "法规库", title: "国家法律法规数据库", desc: "全国人大常委会办公厅建设，检索现行法律、行政法规、地方性法规与司法解释。", source: "全国人大", updated: "持续更新", url: "https://flk.npc.gov.cn/" },
+  { kind: "法规库", title: "中国注册会计师执业准则库", desc: "审计准则、职业道德守则、应用指南及其他专业标准的官方汇集。", source: "中国注册会计师协会", updated: "持续更新", url: "https://www.cicpa.org.cn/ztzl1/Professional_standards/" },
+  { kind: "报告模板", title: "财务报表审计报告参考格式", desc: "审计准则第1501号附录，含上市实体单体及合并财务报表审计报告参考格式。", source: "中国注册会计师协会", updated: "官方PDF", url: "https://www.cicpa.org.cn/ztzl1/Professional_standards/201601/W020210421547026807846.pdf" },
+  { kind: "报告模板", title: "高等学校财务报表审计指引", desc: "附录提供无保留意见等审计报告参考格式，可用于教育行业项目参考。", source: "中国注册会计师协会", updated: "官方PDF", url: "https://www.cicpa.org.cn/xxfb/news/201412/W020210118389976201481.pdf" },
+  { kind: "案例讲解", title: "企业会计准则应用案例库", desc: "覆盖收入、金融工具、股份支付、租赁、所得税等准则的具体业务案例。", source: "财政部会计司", updated: "持续更新", url: "https://kjs.mof.gov.cn/zt/kjzzss/srzzzq/" },
+  { kind: "案例讲解", title: "政府及非营利组织会计应用案例", desc: "包含合并财务报表、成本核算、预算管理一体化及长期股权投资案例。", source: "财政部会计司", updated: "持续更新", url: "https://kjs.mof.gov.cn/zt/zfkjzz/yyal/" },
+  { kind: "最新案例", title: "准则解释第20号实施问答与案例", desc: "2026年7月24日发布，跟进最新企业会计准则解释及配套实务口径。", source: "财政部会计司", updated: "07.24", url: "https://kjs.mof.gov.cn/gongzuotongzhi/index.htm" },
+  { kind: "培训资料", title: "继续教育课程与直播回放入口", desc: "上海注协公开的年度录播与专题直播回放入口，按会员资格登录学习。", source: "上海市注册会计师协会", updated: "开放至12.31", url: "https://www.shcpa.org.cn/column/?psid=71" },
+];
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState("全部");
@@ -28,7 +39,7 @@ export default function Home() {
     <main>
       <header className="topbar">
         <a className="brand" href="#top"><span className="brandMark">财</span><span>财经培训日报</span></a>
-        <nav><a href="#today">今日速览</a><a href="#list">培训清单</a><a href="#sources">信息来源</a></nav>
+        <nav><a href="#today">今日速览</a><a href="#list">培训清单</a><a href="#resources">免费资源</a><a href="#sources">信息来源</a></nav>
         <span className="mailBadge">每日 08:00 邮件送达</span>
       </header>
 
@@ -68,6 +79,18 @@ export default function Home() {
           </article>)}
           {!shown.length && <div className="empty">没有找到匹配的培训信息，试试其他关键词。</div>}
         </div>
+      </section>
+
+      <section className="resourceSection" id="resources">
+        <div className="sectionTitle"><div><span className="kicker">FREE PROFESSIONAL TOOLKIT</span><h2>免费专业资源</h2></div><p>法规、模板、课件与案例 · 官方入口直达</p></div>
+        <div className="resourceGrid">
+          {resources.map((resource, i) => <a className="resourceCard" href={resource.url} target="_blank" rel="noreferrer" key={resource.title}>
+            <div className="resourceTop"><span>{resource.kind}</span><b>{String(i + 1).padStart(2, "0")}</b></div>
+            <h3>{resource.title}</h3><p>{resource.desc}</p>
+            <div className="resourceFoot"><span>{resource.source}</span><em>{resource.updated}</em><b>↗</b></div>
+          </a>)}
+        </div>
+        <p className="resourceNote">说明：标注“会员课程”的培训资料可能需要协会会员账号登录，但资源入口及通知均可公开访问。</p>
       </section>
 
       <section className="sources" id="sources"><div><span className="kicker">SOURCE &amp; FRESHNESS</span><h2>信息收录标准</h2></div><p>优先收录近7天发布的官方信息；近30天信息仅在仍可报名或学习时保留；更早通知必须有明确的年度开放期限才会进入主列表。已结束、已截止项目转入归档，不再占用今日清单。</p><div className="sourceTags"><span>发布日期可核验</span><span>参与期限有效</span><span>费用如实标注</span><span>官方原文直达</span></div></section>
