@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 const items = [
+  { region: "重庆", org: "重庆市财政局", type: "财政局", title: "2026年高级会计师继续教育培训", topic: "五类项目覆盖企业与综合素养、预算成本管控、数智化合规及高级财务管理；具体期次与收费以报名系统/官方公众号为准。", published: "06.12", date: "07月—12月", deadline: "12月（按期次）", mode: "线下/混合，以通知为准", fee: "收费待报名页核验", status: "开放报名", hot: true, url: "https://czj.cq.gov.cn/zwgk_268/zfxxgkml/zcwj/qtwj/202606/t20260612_15751471_wap.html" },
   { region: "上海", org: "上海市注册会计师协会", type: "注册会计师", title: "2026年度助理审计人员网络培训", topic: "在线选课学习，完成24学时可按规定抵免会计继续教育90分", published: "07.01", date: "2026年度", deadline: "年度内", mode: "线上录播", fee: "协会组织", status: "开放学习", hot: true, url: "https://www.shcpa.org.cn/info/?pid=7420" },
   { region: "上海", org: "上海市注册会计师协会", type: "注册会计师", title: "2026年度注册会计师网络录播", topic: "专业课程、职业道德及直播回放，自主在线选课", published: "06.22", date: "06.22—12.31", deadline: "12.31", mode: "线上录播", fee: "协会组织", status: "开放学习", hot: true, url: "https://www.shcpa.org.cn/info/?pid=7410" },
   { region: "上海", org: "上海市注册会计师协会", type: "注册会计师", title: "胜任力专题直播（一）课程回放", topic: "可持续信息鉴证、国际可持续准则及AI审计实务", published: "06.08", date: "07.01—12.31", deadline: "12.31", mode: "线上回放", fee: "限已报名会员", status: "开放回放", hot: false, url: "https://www.shcpa.org.cn/info/?pid=7388" },
@@ -39,10 +40,6 @@ const bigFourResources = [
 ];
 
 const bilibiliVideos = [
-  { category: "CPA财务管理", title: "2026 CPA《财管》零基础入门课", creator: "斩六将CPA", published: "2026.01.15", lessons: "约15小时 · 系列课", note: "从财务报表分析、货币时间价值到投融资决策，适合零基础搭建财管框架。", risk: "站内免费观看；配套资料需跳转APP", url: "https://www.bilibili.com/video/BV182rfBnEK9/" },
-  { category: "财税实务", title: "2026财税系统课：企业税与个人税", creator: "B站财税创作者", published: "2026.01.20", lessons: "127集 · 系列课", note: "覆盖费用税前扣除、增值税、个人所得税与常见企业财税问题。", risk: "站内免费观看；观点需对照现行法规", url: "https://www.bilibili.com/video/BV1HfkhBaEnp/" },
-  { category: "CPA税法", title: "注册会计师《税法》系统课程", creator: "之了课堂", published: "持续更新", lessons: "96集 · 系列课", note: "从税法总论到增值税、企业所得税及国际税收，适合CPA税法系统学习。", risk: "视频免费；讲义为条件领取", url: "https://www.bilibili.com/video/BV1t84y1p71Y/" },
-  { category: "管理会计", title: "中央财经大学《管理会计》", creator: "金融知识库", published: "2023.04.13", lessons: "44讲 · 完整课程", note: "讲解管理会计框架、职业道德、预算、成本与经营决策等基础内容。", risk: "站内免费观看；非校方账号上传", url: "https://www.bilibili.com/video/BV1za4y1N74x/" },
 ];
 
 export default function Home() {
@@ -67,25 +64,25 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="heroNoise" />
         <div className="heroInner">
-          <div className="eyebrow"><span /> 2026年7月31日 · 星期五</div>
+          <div className="eyebrow"><span /> 2026年8月2日 · 星期日</div>
           <h1>重要的财经培训，<br /><em>不错过。</em></h1>
           <p>聚合各省市注册会计师协会、税务师协会及财政局公开发布的免费财务、税务与法律培训信息。</p>
           <div className="heroActions"><a className="primary" href="#list">浏览有效培训 <b>→</b></a><span>本次核验 <strong>31</strong> 个省级官方入口</span></div>
         </div>
         <aside className="brief" id="today">
-          <div className="briefHead"><span>DAILY BRIEF</span><b>07 / 31</b></div>
-          <div className="bigNum">06</div><p>条仍可参与的培训信息</p>
+          <div className="briefHead"><span>DAILY BRIEF</span><b>08 / 02</b></div>
+          <div className="bigNum">07</div><p>条仍可参与的培训信息</p>
           <div className="rule" />
-          <div className="miniStats"><div><b>00</b><span>近7日新增</span></div><div><b>06</b><span>仍可参加</span></div><div><b>03</b><span>覆盖地区</span></div></div>
-          <small>人工核验于 2026-07-31 19:35</small>
+          <div className="miniStats"><div><b>00</b><span>近7日新增</span></div><div><b>07</b><span>仍可参加</span></div><div><b>04</b><span>覆盖地区</span></div></div>
+          <small>人工核验于 2026-08-02 08:00</small>
         </aside>
       </section>
 
-      <section className="ticker"><span>新鲜度提示</span><div>近 7 天暂无可确认的新增免费培训 · 当前展示仍在开放的有效项目 · 已结束培训不进入主列表</div></section>
+      <section className="ticker"><span>新鲜度提示</span><div>近 7 天暂无可确认的新发培训 · 上海税务“政府开放月”报名已于 8 月 1 日截止，未纳入主列表 · 已结束项目不进入主列表</div></section>
 
       <section className="content" id="list">
         <div className="sectionTitle"><div><span className="kicker">VERIFIED &amp; STILL OPEN</span><h2>仍可参加</h2></div><p>按有效性排序 · 旧通知不等于过期项目</p></div>
-        <div className="freshness"><b>本期口径</b><span>近7天新发：0条</span><span>近30天新发且有效：1条</span><span>长期有效：5条</span><em>发布日期与参与截止日分开显示</em></div>
+        <div className="freshness"><b>本期口径</b><span>近7天新发：0条</span><span>近30天新发且有效：0条</span><span>年度/长期有效：7条</span><em>发布日期与参与截止日分开显示</em></div>
         <div className="toolbar">
           <div className="tabs">{filters.map(f => <button key={f} className={active === f ? "active" : ""} onClick={() => setActive(f)}>{f}</button>)}</div>
           <div className="tools"><select aria-label="选择地区" value={region} onChange={e => setRegion(e.target.value)}><option>全国</option><option>北京</option><option>上海</option><option>山东</option></select><label className="search">⌕<input aria-label="搜索培训" placeholder="搜索主题或机构" value={query} onChange={e => setQuery(e.target.value)} /></label></div>
@@ -105,7 +102,7 @@ export default function Home() {
       <section className="resourceSection" id="resources">
         <div className="sectionTitle"><div><span className="kicker">FREE PROFESSIONAL TOOLKIT</span><h2>免费专业资源</h2></div><p>法规、模板、课件与案例 · 官方入口直达</p></div>
         <div className="wechatRadar"><span>公众号雷达</span><div><b>新增微信信源</b><p>同步检索各地注协、税协、财政局官方公众号；仅收录账号身份可由官网或政府信息交叉验证的文章。</p></div><em>公众号首发 → 身份核验 → 链接入库</em></div>
-        <div className="communityRadar"><span>小红书社区资源</span><p>平台要求登录后才返回搜索结果；当前不展示未经核验的帖子。登录检索后将按“直接免费 / 条件领取 / 待核验”分类，并保留原帖链接与作者。</p><b>待登录采集</b></div>
+        <div className="communityRadar"><span>小红书社区资源</span><p>本次小红书采集受登录限制：当前环境无已登录会话，未展示或下载未经核验的帖子与网盘文件。后续登录检索将记录作者、发布日期、原帖、领取方式、文件类型及版权/安全风险。</p><b>登录受限</b></div>
         <div className="resourceGrid">
           {resources.map((resource, i) => <a className="resourceCard" href={resource.url} target="_blank" rel="noreferrer" key={resource.title}>
             <div className="resourceTop"><span>{resource.kind}</span><b>{String(i + 1).padStart(2, "0")}</b></div>
@@ -129,6 +126,7 @@ export default function Home() {
             <div className="videoFacts"><span>{video.creator}</span><b>{video.lessons}</b></div>
             <div className="videoRisk">核验提示：{video.risk}<i>播放 ↗</i></div>
           </a>)}
+          {!bilibiliVideos.length && <div className="empty">本期未发现近 7 天新发或近 30 天仍开放、且来源与版权状态可核验的免费财务课程。已过滤非机构搬运、站外付费及不明网盘资料。</div>}
         </div>
         <p className="resourceNote">说明：标注“会员课程”的培训资料可能需要协会会员账号登录，但资源入口及通知均可公开访问。</p>
       </section>
