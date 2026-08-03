@@ -26,6 +26,7 @@ const resources = [
   { kind: "IMA免费资源", title: "CMA官方免费备考资源", desc: "包含CMA练习题、考试模拟器、个性化学习计划、考试指南及备考策略网络研讨会。", source: "IMA官方", updated: "持续开放", url: "https://prodcm.imanet.org/ima-certifications/cma-certification/prepare/resources" },
   { kind: "IMA网络课程", title: "IMA Webinars 专题中心", desc: "覆盖数据分析、财务报告、领导力、职业发展及战略管理；部分资源会员免费。", source: "IMA官方", updated: "持续更新", url: "https://www.imanet.org/continuing-education/webinars" },
   { kind: "IMA框架", title: "管理会计能力素质框架", desc: "IMA管理会计能力素质框架及技术分析、报告控制、战略绩效等学习资源索引。", source: "IMA官方", updated: "免费PDF", url: "https://prodcm.imanet.org/-/media/IMA/Files/Home/Insights-and-Trends/SMA/IMA-Management-Accounting-Competency-Framework/IMA-Management-Accounting-Competency-Framework.ashx" },
+  { kind: "IMA网络研讨会", title: "Crypto Currency and GAAP（1 CPE）", desc: "IMA AZ Valley of the Sun Chapter 的线上活动；页面标注 Free（Virtual），报名状态以活动页为准。", source: "IMA 官方分会", updated: "08.18 · 公众免费", url: "https://wilmington.imanet.org/events/calendar" },
 ];
 
 const bigFourResources = [
@@ -35,6 +36,7 @@ const bigFourResources = [
   { firm: "普华永道 PwC", kind: "税务指南", title: "Worldwide Tax Summaries", desc: "由各地税务专家编写，覆盖全球企业税和个人税，可跨国家、按专题生成定制对比报告。", access: "公开免费", language: "英文", url: "https://taxsummaries.pwc.com/" },
   { firm: "安永 EY", kind: "会计准则", title: "International GAAP", desc: "国际财务报告准则的解释与实务应用指南，可通过EY Atlas客户端免费阅读数字版本。", access: "免费注册阅读", language: "英文", url: "https://www.ey.com/en_gl/technical/ifrs-technical-resources/international-gaap-2024-global-perspective-on-ifrs" },
   { firm: "安永 EY", kind: "税务指南", title: "Worldwide Corporate Tax Guide", desc: "约150个司法管辖区的企业所得税、预提税、转让定价和反避税制度年度汇编。", access: "免费PDF", language: "英文", url: "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/technical/tax-guides/documents/ey-worldwide-corporate-tax-guide-10-2025.pdf" },
+  { firm: "安永 EY", kind: "网络研讨会", title: "EY Center for Tax Policy 月度更新（8月）", desc: "税务政策、经济变化与 IRS 动态解读；60分钟，直播可获 1.2 CPE，需在活动页注册。", access: "免费注册", language: "英文", url: "https://www.ey.com/en_us/media/webcasts/2026/08/ey-center-for-tax-policy-monthly-update-august-2026" },
   { firm: "毕马威 KPMG", kind: "会计准则", title: "IFRS Institute", desc: "IFRS与可持续披露技术文章、实务手册、工具包、播客及网络研讨会回放。", access: "公开免费", language: "英文", url: "https://kpmg.com/us/en/insights-by-topic/ifrs-institute.html" },
   { firm: "毕马威 KPMG", kind: "税务工具", title: "Tax Tools & TaxNewsFlash", desc: "全球税率比较工具、国际税务动态、监管政策与重要司法意见的快速摘要。", access: "公开免费", language: "英文", url: "https://kpmg.com/ee/en/services/tax/tax-tools-and-resources.html" },
 ];
@@ -64,7 +66,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="heroNoise" />
         <div className="heroInner">
-          <div className="eyebrow"><span /> 2026年8月2日 · 星期日</div>
+          <div className="eyebrow"><span /> 2026年8月3日 · 星期一</div>
           <h1>重要的财经培训，<br /><em>不错过。</em></h1>
           <p>聚合各省市注册会计师协会、税务师协会及财政局公开发布的免费财务、税务与法律培训信息。</p>
           <div className="heroActions"><a className="primary" href="#list">浏览有效培训 <b>→</b></a><span>本次核验 <strong>31</strong> 个省级官方入口</span></div>
@@ -74,11 +76,11 @@ export default function Home() {
           <div className="bigNum">07</div><p>条仍可参与的培训信息</p>
           <div className="rule" />
           <div className="miniStats"><div><b>00</b><span>近7日新增</span></div><div><b>07</b><span>仍可参加</span></div><div><b>04</b><span>覆盖地区</span></div></div>
-          <small>人工核验于 2026-08-02 08:00</small>
+          <small>人工核验于 2026-08-03 08:00</small>
         </aside>
       </section>
 
-      <section className="ticker"><span>新鲜度提示</span><div>近 7 天暂无可确认的新发培训 · 上海税务“政府开放月”报名已于 8 月 1 日截止，未纳入主列表 · 已结束项目不进入主列表</div></section>
+      <section className="ticker"><span>新鲜度提示</span><div>近 7 天暂无可确认的新发国内官方培训 · 已补充 IMA 与 EY 本月可访问线上资源 · 已结束项目不进入主列表</div></section>
 
       <section className="content" id="list">
         <div className="sectionTitle"><div><span className="kicker">VERIFIED &amp; STILL OPEN</span><h2>仍可参加</h2></div><p>按有效性排序 · 旧通知不等于过期项目</p></div>
