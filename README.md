@@ -4,9 +4,11 @@
 
 - **在线阅读**：<https://zwcpa1973.github.io/finance-daily-report/>
 - 每期对应仓库根目录的 `merged_report_YYYY-MM-DD.html`，`index.html` 为全部期刊索引
-- 日报由本机 `merge_daily_report.py` 生成（脚本含邮箱配置，不入库），生成后自动
-  重新生成索引、提交并推送，GitHub Actions（`.github/workflows/deploy-pages.yml`）
-  会把最新内容发布到 GitHub Pages
+- **全自动云端运行**：GitHub Actions 定时任务（`.github/workflows/daily-report.yml`）
+  每天北京时间 17:00 抓取 18 个监管机构栏目、与站点培训内容合并、发送邮件到
+  `EMAIL_ACCOUNT`，并自动提交新报告、发布到 GitHub Pages，无需任何本机开机
+- 邮箱账号/授权码存于仓库 Secrets（`EMAIL_ACCOUNT` / `EMAIL_PASSWORD`），代码中无明文
+- 手动补跑：在 GitHub 仓库 Actions 页面运行 "Daily report (email + Pages)" 即可
 
 # vinext-starter
 
