@@ -1,3 +1,13 @@
+# 财经日报
+
+每日合并日报（财经培训信息 + 免费专业资源 + 财税监管新闻）的在线归档。
+
+- **在线阅读**：<https://zwcpa1973.github.io/finance-daily-report/>
+- 每期对应仓库根目录的 `merged_report_YYYY-MM-DD.html`，`index.html` 为全部期刊索引
+- 日报由本机 `merge_daily_report.py` 生成（脚本含邮箱配置，不入库），生成后自动
+  重新生成索引、提交并推送，GitHub Actions（`.github/workflows/deploy-pages.yml`）
+  会把最新内容发布到 GitHub Pages
+
 # vinext-starter
 
 A clean full-stack starter running on
