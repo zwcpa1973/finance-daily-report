@@ -34,6 +34,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local logs & packaging artifacts
+merge_daily_report.log
+.openai/
+__pycache__/
+
 # typescript
 next-env.d.ts
 /dist/
