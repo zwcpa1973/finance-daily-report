@@ -2,8 +2,8 @@ name: Daily report (email + Pages)
 
 on:
   schedule:
-    # UTC 09:00 = 北京时间 17:00
-    - cron: "0 9 * * *"
+    # UTC 00:07 = 北京时间 08:07（特意用非整点分钟，降低 GitHub 定时任务高峰排队延迟）
+    - cron: "7 0 * * *"
   workflow_dispatch:
 
 permissions:
