@@ -5,7 +5,8 @@
 - **在线阅读**：<https://zwcpa1973.github.io/finance-daily-report/>
 - 每期对应仓库根目录的 `merged_report_YYYY-MM-DD.html`，`index.html` 为全部期刊索引
 - **全自动云端运行**：GitHub Actions 定时任务（`.github/workflows/daily-report.yml`）
-  每天北京时间 17:00 抓取 18 个监管机构栏目、与站点培训内容合并、发送邮件到
+  每天北京时间 08:07（UTC 00:07，非整点分钟以避开定时任务高峰排队）抓取 18 个监管
+  机构栏目、与站点培训内容合并、发送邮件到
   `EMAIL_ACCOUNT`，并自动提交新报告、发布到 GitHub Pages，无需任何本机开机
 - 邮箱账号/授权码存于仓库 Secrets（`EMAIL_ACCOUNT` / `EMAIL_PASSWORD`），代码中无明文
 - 手动补跑：在 GitHub 仓库 Actions 页面运行 "Daily report (email + Pages)" 即可
